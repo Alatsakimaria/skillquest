@@ -1,16 +1,82 @@
-# React + Vite
+# SkillQuest  
+A structured, data-driven dashboard for job tracking, skill development, and application insights.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SkillQuest is a full-stack productivity tool built to bring structure to the job-search process.  
+It combines a job board, skills insights, a learning-task planner, note-taking, and a calendar view — all backed by a real Express API and Prisma/SQLite database.
 
-Currently, two official plugins are available:
+The project is designed to simulate a real SaaS product with modern architecture and clean separation between frontend and backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Job Board
+Organize applications across four stages:
+- **Wishlist**
+- **Applied**
+- **Interview**
+- **Outcome (Offer / Rejected)**
 
-## Expanding the ESLint configuration
+Features:
+- Add/delete jobs  
+- View job details dynamically  
+- Search by title/company/tech  
+- Filter by location (Remote, Hybrid, On-Site)  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### 2. Job Detail + Skill Requirements
+Each job includes:
+- Required skills vs your skill level  
+- Tech tags  
+- Match % score  
+- Gaps indicators  
+- Notes per job (stored in DB)
+
+---
+
+### 3. Notes per Job
+Each job has a personal notes area:
+- Add unlimited notes  
+- Notes saved in SQLite via Prisma
+- Shown live inside the Job Detail panel
+
+---
+
+### 4. Learning Tasks System
+A productivity planner for improving your skills:
+- Add tasks linked to jobs or independent
+- Track status (Not started / In progress / Done)
+- Track progress percentage
+- Add time/effort estimates
+
+---
+
+### 5. Calendar View
+Visualize all jobs over time using a custom calendar interface.
+
+---
+
+### Import / Export Data
+- Export all app data to JSON
+- Import JSON to restore previous sessions
+
+---
+
+## Tech Stack
+
+### **Frontend**
+- React (Vite)
+- Custom CSS
+- Fetch API for backend integration
+
+### **Backend**
+- **Node.js** — runtime environment  
+- **Express.js** — REST API routes  
+- **Prisma ORM** — database layer  
+- **SQLite** — local relational database  
+
+---
+
+prisma.job.create()
+prisma.task.update()
