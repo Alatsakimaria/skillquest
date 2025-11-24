@@ -78,5 +78,22 @@ Visualize all jobs over time using a custom calendar interface.
 
 ---
 
-prisma.job.create()
-prisma.task.update()
+## Installation & Running
+
+### 1. Install dependencies
+-  npm install
+
+## 2. Run database migrations
+-  npx prisma migrate dev --name init
+
+## 3. Seed DB with demo data (optional but recommended)
+- node prisma/seed.js
+
+## 4. Start backend server
+- node server/index.js
+Backend runs at: **http://localhost:4000**
+
+## 5. Start React frontend
+- npm run dev
+Frontend runs at: **http://localhost:5173**
+
