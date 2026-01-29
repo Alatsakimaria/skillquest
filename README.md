@@ -81,21 +81,31 @@ Visualize all jobs over time using a custom calendar interface.
 ## Installation & Running
 
 ### 1. Install dependencies
-```bash  npm install```
+```bash
+npm install
+```
 
 ## 2. Run database migrations
-```bash  npx prisma migrate dev --name init```
+```bash
+npx prisma migrate dev --name init
+```
 
 ## 3. Seed DB with demo data (optional but recommended)
-```bash node prisma/seed.js```
+```bash
+node prisma/seed.js
+```
 
 ## 4. Start backend server
-```bash node server/index.js```
+```bash
+node server/index.js
+```
 
 Backend runs at: **http://localhost:4000**
 
 ## 5. Start React frontend
-```bash npm run dev```
+```bash
+npm run dev
+```
   
 Frontend runs at: **http://localhost:5173**
 
